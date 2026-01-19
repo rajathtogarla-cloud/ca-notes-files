@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Control in Audit Engagements | QB Summary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f2f5;
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+            background-attachment: fixed;
+            color: #333;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-panel:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section Specific Gradients for Headers */
+        .gradient-header-1 { background: linear-gradient(135deg, #FF6B6B 0%, #EE5D6C 100%); } /* Executive */
+        .gradient-header-2 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); } /* Leadership */
+        .gradient-header-3 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); } /* Client Acceptance */
+        .gradient-header-4 { background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); } /* Ethics */
+        .gradient-header-5 { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); } /* Performance */
+        .gradient-header-6 { background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); } /* Documentation */
+        .gradient-header-7 { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); } /* Compliance */
+
+        .section-icon {
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        .custom-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+        }
+
+        .custom-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: currentColor;
+            font-weight: bold;
+        }
+        
+        /* Table Styling */
+        .vibrant-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .vibrant-table th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        .vibrant-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            background: rgba(255,255,255,0.8);
+        }
+        .vibrant-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .pill-blue { background-color: #e0f2fe; color: #0369a1; }
+        .pill-purple { background-color: #f3e8ff; color: #7e22ce; }
+        .pill-red { background-color: #fee2e2; color: #b91c1c; }
+
+    </style>
+</head>
+<body class="pb-12">
+
+    <!-- Hero Section -->
+    <header class="text-center py-16 px-4 text-white relative overflow-hidden">
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h1 class="text-5xl font-bold mb-4 tracking-tight">Quality Control in Audit Engagements</h1>
+            <p class="text-xl opacity-90 mb-6">Standards and Implementation (SQC 1 & SA 220)</p>
+            <div class="flex justify-center gap-4 flex-wrap">
+                <span class="bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full border border-white/30">
+                    <i class="fas fa-shield-alt mr-2"></i>Integrity
+                </span>
+                <span class="bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full border border-white/30">
+                    <i class="fas fa-eye mr-2"></i>Review
+                </span>
+                <span class="bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full border border-white/30">
+                    <i class="fas fa-file-contract mr-2"></i>Compliance
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 -mt-8 relative z-20">
+        
+        <!-- Executive Summary -->
+        <div class="glass-panel mb-8 overflow-hidden">
+            <div class="gradient-header-1 p-6 text-white">
+                <h2 class="text-2xl font-bold flex items-center">
+                    <i class="fas fa-star section-icon mr-3"></i> Executive Summary
+                </h2>
+            </div>
+            <div class="p-8">
+                <p class="mb-6 text-gray-700 text-lg">
+                    The integrity of financial reporting relies on a robust quality control system within audit firms. 
+                    Governed by <strong>SQC 1</strong> and <strong>SA 220</strong>, firms must prioritize quality over commercial gain.
+                </p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-red-50 p-4 rounded-xl border-l-4 border-red-400">
+                        <h3 class="font-bold text-red-800 mb-2">Critical Takeaways</h3>
+                        <ul class="custom-list text-gray-700 space-y-2">
+                            <li><span class="font-semibold">Priority of Quality:</span> Overrides commercial strategy.</li>
+                            <li><span class="font-semibold">Client Vigilance:</span> Rigorous evaluation of integrity & criminal history.</li>
+                            <li><span class="font-semibold">Listed Entities:</span> Mandatory Engagement Quality Control Review (EQCR).</li>
+                            <li><span class="font-semibold">Rotation:</span> Mandatory partner rotation (typically every 7 years) to mitigate familiarity threats.</li>
+                            <li><span class="font-semibold">Documentation:</span> Files finalized within 60 days of report date.</li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <div class="text-center p-6">
+                            <i class="fas fa-balance-scale text-6xl text-red-300 mb-4 block"></i>
+                            <span class="text-sm text-gray-500 italic">"Quality must override commercial considerations."</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- I. Leadership Responsibilities -->
+            <div class="glass-panel overflow-hidden flex flex-col">
+                <div class="gradient-header-2 p-5 text-white">
+                    <h3 class="text-xl font-bold flex items-center">
+                        <i class="fas fa-user-tie section-icon mr-3"></i> I. Tone at the Top
+                    </h3>
+                </div>
+                <div class="p-6 flex-grow">
+                    <div class="mb-4">
+                        <h4 class="font-bold text-blue-800 mb-2">Overriding Commercial Interests</h4>
+                        <p class="text-gray-600 text-sm mb-3">Leadership fails when:</p>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li class="flex items-start"><i class="fas fa-times-circle text-red-400 mt-1 mr-2"></i> Commercials (fees) override quality.</li>
+                            <li class="flex items-start"><i class="fas fa-times-circle text-red-400 mt-1 mr-2"></i> Insufficient resources for quality policy development.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-blue-800 mb-2">Personnel Sensitization</h4>
+                        <p class="text-gray-600 text-sm">
+                            Offering "clean reports" for work or soliciting services via audit violates the Code of Ethics.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- II. Client Acceptance -->
+            <div class="glass-panel overflow-hidden flex flex-col">
+                <div class="gradient-header-3 p-5 text-white">
+                    <h3 class="text-xl font-bold flex items-center">
+                        <i class="fas fa-handshake section-icon mr-3"></i> II. Client Acceptance
+                    </h3>
+                </div>
+                <div class="p-6 flex-grow">
+                    <div class="mb-4">
+                        <h4 class="font-bold text-purple-800 mb-2">Evaluating Integrity</h4>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="pill pill-purple">Reputation</span>
+                            <span class="pill pill-purple">Control Attitude</span>
+                            <span class="pill pill-purple">Criminal Activity</span>
+                            <span class="pill pill-purple">Past Transitions</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Check for money laundering, tax searches, or reasons for previous auditor resignation.</p>
+                    </div>
+                    <div class="bg-purple-50 p-3 rounded-lg border border-purple-100">
+                        <h4 class="font-bold text-purple-800 text-sm mb-1">Withdrawal Procedures</h4>
+                        <ol class="list-decimal pl-4 text-xs text-gray-700 space-y-1">
+                            <li>Discuss with Management & TCWG.</li>
+                            <li>Communicate reasons.</li>
+                            <li>Check reporting requirements to authorities.</li>
+                            <li>Document everything.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- III. Ethics & Independence -->
+            <div class="glass-panel overflow-hidden flex flex-col">
+                <div class="gradient-header-4 p-5 text-gray-800">
+                    <h3 class="text-xl font-bold flex items-center">
+                        <i class="fas fa-gavel section-icon mr-3"></i> III. Ethics & Independence
+                    </h3>
+                </div>
+                <div class="p-6 flex-grow">
+                    <div class="mb-4">
+                        <h4 class="font-bold text-teal-800 mb-2">Familiarity Threats</h4>
+                        <p class="text-sm text-gray-700 mb-2">Long-term relationships with listed clients create familiarity threats.</p>
+                        <div class="bg-teal-50 border-l-4 border-teal-400 p-3 rounded">
+                            <span class="font-bold text-teal-900">The 7-Year Rule:</span>
+                            <span class="text-sm block">Engagement partners for listed entities must rotate normally every 7 years.</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-teal-800 mb-1">Engagement Partner Role</h4>
+                        <ul class="custom-list text-sm text-gray-700">
+                            <li>Evaluate independence threats.</li>
+                            <li>Assess breaches of policy.</li>
+                            <li>Independence assessment must be reviewed by EQCR.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IV. Performance & EQCR -->
+            <div class="glass-panel overflow-hidden flex flex-col">
+                <div class="gradient-header-5 p-5 text-white">
+                    <h3 class="text-xl font-bold flex items-center">
+                        <i class="fas fa-tasks section-icon mr-3"></i> IV. Performance & EQCR
+                    </h3>
+                </div>
+                <div class="p-6 flex-grow">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="bg-pink-100 p-3 rounded-full text-pink-600">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-pink-800">Engagement Quality Control Review (EQCR)</h4>
+                            <p class="text-xs text-pink-600 font-bold uppercase mb-1">Mandatory for Listed Entities</p>
+                            <p class="text-sm text-gray-700">
+                                Reviewer evaluates independence, judgments, and objectivity. They do <em>not</em> make decisions for the team.
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="border-gray-200 my-3">
+                    <div class="mb-2">
+                        <h4 class="font-bold text-pink-800 text-sm">Conflict Resolution</h4>
+                        <p class="text-xs text-gray-600">Consult other practitioners or regulatory bodies. Report cannot be issued until resolved.</p>
+                    </div>
+                    <div class="bg-pink-50 p-2 rounded text-center border border-pink-200">
+                        <strong class="text-pink-900 text-sm">Report Date Rule:</strong>
+                        <span class="text-xs block text-gray-700">Auditor's report cannot be dated prior to EQCR completion.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- V. Documentation -->
+            <div class="glass-panel overflow-hidden lg:col-span-2">
+                <div class="gradient-header-6 p-5 text-white">
+                    <h3 class="text-xl font-bold flex items-center">
+                        <i class="fas fa-folder-open section-icon mr-3"></i> V. Documentation & Monitoring
+                    </h3>
+                </div>
+                <div class="p-6 grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-indigo-800 mb-3">Engagement File Assembly</h4>
+                        <div class="flex items-center mb-4">
+                            <div class="text-4xl font-bold text-indigo-400 mr-3">60</div>
+                            <div class="leading-tight text-sm text-gray-600">
+                                <strong>Days</strong><br>
+                                Max time to finalize assembly after report date.
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-indigo-800 mb-2">Monitoring System</h4>
+                        <ul class="custom-list text-sm text-gray-700">
+                            <li>Check design & implementation.</li>
+                            <li>Handle complaints/allegations.</li>
+                            <li>Remedial actions for non-compliance.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-indigo-800 mb-3">Data Integrity Requirements</h4>
+                        <table class="vibrant-table text-sm">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Requirement</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="font-semibold">Physical Files</td>
+                                    <td>Cross-referenced or scanned to ensure completeness.</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold">Electronic Scans</td>
+                                    <td>Reflect entire content (signatures) & indexed for retrieval.</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold">Media Controls</td>
+                                    <td>Prevent unauthorized alteration, addition, or deletion.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VI. Statutory Reporting -->
+            <div class="glass-panel overflow-hidden lg:col-span-2 bg-gradient-to-r from-gray-50 to-white">
+                <div class="gradient-header-7 p-5 text-gray-800">
+                    <h3 class="text-xl font-bold flex items-center">
+                        <i class="fas fa-balance-scale-right section-icon mr-3"></i> VI. Statutory Reporting (CARO 2020)
+                    </h3>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-start">
+                        <div class="text-green-500 text-3xl mr-4"><i class="fas fa-check-circle"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-lg">Specific vs. General Reporting</h4>
+                            <p class="text-gray-700 mt-2">
+                                Compliance with frameworks like <strong>CARO 2020</strong> is required under SA 220. 
+                                <span class="text-red-500 font-semibold">"General" reporting</span> (e.g., saying a company is "generally regular" without evidence) 
+                                is <span class="underline decoration-red-400 decoration-2">unacceptable</span> and constitutes a lapse in audit quality.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="mt-12 text-center text-gray-500 text-sm pb-8">
+            <p>Generated based on "QB Summary - Quality Control in Audit Engagements"</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
