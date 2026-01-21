@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarbanes-Oxley Act (SOX) Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+
+        h1, h2, h3, h4, .serif-font {
+            font-family: 'Merriweather', serif;
+        }
+
+        .navy-bg {
+            background-color: #0f172a;
+        }
+
+        .crimson-accent {
+            background-color: #9f1239;
+        }
+
+        .crimson-text {
+            color: #9f1239;
+        }
+
+        .gold-border {
+            border-color: #d4af37;
+        }
+
+        .paper-texture {
+            background-image: linear-gradient(#f1f5f9 1px, transparent 1px), linear-gradient(90deg, #f1f5f9 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .official-seal {
+            box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.1);
+        }
+
+        .card-hover {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .list-check li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .list-check li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #9f1239;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Nav -->
+    <header class="navy-bg text-white border-b-4 border-red-800 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center official-seal">
+                        <i class="fas fa-balance-scale text-2xl text-white"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold tracking-wider uppercase">Sarbanes-Oxley</h1>
+                        <p class="text-xs text-slate-400 tracking-widest">Act of 2002</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-6 text-sm font-semibold tracking-wide">
+                    <a href="#overview" class="hover:text-red-400 transition-colors">Overview</a>
+                    <a href="#section404" class="hover:text-red-400 transition-colors">Section 404</a>
+                    <a href="#requirements" class="hover:text-red-400 transition-colors">SEC & PCAOB</a>
+                    <a href="#reporting" class="hover:text-red-400 transition-colors">Reporting</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="overview" class="bg-white py-16 lg:py-24 border-b border-slate-200 paper-texture">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-red-100 text-red-800 text-xs font-bold uppercase tracking-widest mb-4">Federal Regulation</span>
+            <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
+                Corporate Responsibility & <br>
+                <span class="crimson-text">Financial Protection</span>
+            </h2>
+            <p class="text-xl text-slate-600 leading-relaxed mb-8">
+                Signed into law in 2002, the Sarbanes-Oxley Act revamped federal regulations related to corporate governance and reporting obligations to reduce corporate fraud.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+                <div class="bg-slate-50 p-4 rounded border border-slate-200">
+                    <i class="fas fa-shield-alt text-slate-400 mb-2"></i>
+                    <p class="font-bold text-slate-800">Reduce Fraud</p>
+                </div>
+                <div class="bg-slate-50 p-4 rounded border border-slate-200">
+                    <i class="fas fa-file-invoice-dollar text-slate-400 mb-2"></i>
+                    <p class="font-bold text-slate-800">Tighten Procedures</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 404 Focus -->
+    <section id="section404" class="py-16 navy-bg text-white relative overflow-hidden">
+        <!-- Decorative bg elements -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-red-900 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-800 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 border-l-4 border-red-500 pl-4">SOX Section 404</h2>
+                    <p class="text-lg text-slate-300 leading-relaxed mb-6">
+                        The cornerstone of the act. It requires publicly traded companies to establish internal controls and procedures for Financial Reporting (FR).
+                    </p>
+                    <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                        <h4 class="text-red-400 font-bold mb-2 uppercase text-sm">Key Mandate</h4>
+                        <p class="text-white font-medium">Companies must document, test, and maintain these controls to ensure effectiveness.</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 grid grid-cols-1 gap-4">
+                    <!-- Standard Card -->
+                    <div class="bg-white text-slate-800 p-6 rounded-lg shadow-xl border-l-8 border-yellow-500">
+                        <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
+                            <i class="fas fa-ruler-combined text-yellow-600"></i> The Standard
+                        </h3>
+                        <p class="text-sm text-slate-600 mb-2">Most companies and CPA firms use the:</p>
+                        <p class="font-bold text-slate-900">COSO Internal Control — Integrated Framework</p>
+                    </div>
+                    <!-- Responsibility Card -->
+                    <div class="bg-white text-slate-800 p-6 rounded-lg shadow-xl border-l-8 border-blue-500">
+                        <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
+                            <i class="fas fa-user-tie text-blue-600"></i> Management's Duty
+                        </h3>
+                        <p class="text-sm text-slate-600">
+                            Must assess if the system ensures <strong>reasonable assurance</strong> that material errors in Financial Statements will be prevented or detected.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEC & PCAOB Requirements -->
+    <section id="requirements" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2">SEC & PCAOB Requirements</h2>
+                <div class="w-20 h-1 bg-slate-800 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Management Col -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 card-hover">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-800">
+                            <i class="fas fa-building text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800">Management</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span class="text-slate-600">Assess Internal Control over Financial Reporting (ICOFR).</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span class="text-slate-600">Test the design and effectiveness of controls.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span class="text-slate-600">Report effectiveness in the annual report.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Auditor Col -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 card-hover">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center text-red-800">
+                            <i class="fas fa-search text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800">External Auditors</h3>
+                    </div>
+                    <p class="text-slate-500 text-sm mb-4">Must provide 2 distinct opinions:</p>
+                    <div class="space-y-3">
+                        <div class="p-3 bg-slate-50 border-l-4 border-slate-400 rounded-r">
+                            <span class="font-bold text-slate-800 block">1. ICS Opinion</span>
+                            <span class="text-xs text-slate-500">Independent opinion on effectiveness of Internal Control System.</span>
+                        </div>
+                        <div class="p-3 bg-slate-50 border-l-4 border-slate-400 rounded-r">
+                            <span class="font-bold text-slate-800 block">2. Financial Opinion</span>
+                            <span class="text-xs text-slate-500">Traditional opinion on the financial statements.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reporting Checklist -->
+    <section id="reporting" class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-50 rounded-2xl p-8 md:p-12 border border-slate-200 relative">
+                <!-- Stamp Decoration -->
+                <div class="absolute top-6 right-6 opacity-10 transform rotate-12 border-4 border-red-800 p-2 rounded">
+                    <span class="text-4xl font-black text-red-800 uppercase">Mandatory</span>
+                </div>
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                    <i class="fas fa-file-signature text-red-700"></i> Internal Control Report Content
+                </h2>
+                <p class="mb-6 text-slate-600">The SEC rules require the company’s annual report to include:</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                    <div class="flex items-start gap-3">
+                        <span class="font-bold text-red-700 text-lg">A.</span>
+                        <p class="text-slate-700 text-sm">Statement of Management's responsibility for establishing and maintaining adequate ICOFR.</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="font-bold text-red-700 text-lg">B.</span>
+                        <p class="text-slate-700 text-sm">The specific framework used to evaluate effectiveness (e.g., COSO).</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="font-bold text-red-700 text-lg">C.</span>
+                        <p class="text-slate-700 text-sm">Assessment of effectiveness, explicitly disclosing any <strong>material weaknesses</strong>.</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="font-bold text-red-700 text-lg">D.</span>
+                        <p class="text-slate-700 text-sm">Statement that the public accounting firm has issued an attestation report.</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-slate-200 bg-white p-4 rounded-lg shadow-inner">
+                    <h3 class="font-bold text-slate-800 mb-2 text-sm uppercase tracking-wide">Attestation Report Requirement</h3>
+                    <p class="text-slate-600 text-sm">
+                        <i class="fas fa-paperclip mr-2 text-slate-400"></i>
+                        Companies must physically include the report from the registered public accounting firm that audited the Financial Statements.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="navy-bg text-slate-400 py-8 text-center text-sm border-t border-slate-800">
+        <p class="font-serif italic text-slate-500 mb-2">"To protect investors by improving the accuracy and reliability of corporate disclosures."</p>
+        <p>&copy; Sarbanes-Oxley Act Reference Guide.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COBIT Framework Guide (Light Mode)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Roboto:wght@300;400;500&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffffff; /* Changed to White */
+            color: #1e293b; /* Changed to Slate 800 */
+        }
+
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8); /* White glass effect */
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.2); /* Lighter border */
+        }
+
+        .tech-grid {
+            /* Darker grid lines for visibility on white */
+            background-image: linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .glow-text {
+            /* Adjusted shadow for light background */
+            text-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+        }
+
+        .domain-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Added subtle shadow */
+        }
+
+        .domain-card:hover {
+            transform: translateY(-5px);
+            border-color: #06b6d4;
+            box-shadow: 0 10px 25px rgba(6, 182, 212, 0.2);
+        }
+
+        .accent-gradient {
+            background: linear-gradient(135deg, #0891b2 0%, #2563eb 100%); /* Slightly darker gradient for contrast */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 glass-panel border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-network-wired text-cyan-600 text-2xl"></i>
+                    <span class="font-heading font-bold text-2xl text-slate-800 tracking-wider">COBIT <span class="text-cyan-600">5</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#overview" class="text-sm font-medium text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Overview</a>
+                    <a href="#domains" class="text-sm font-medium text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Domains</a>
+                    <a href="#resources" class="text-sm font-medium text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Resources</a>
+                    <a href="#value" class="text-sm font-medium text-slate-600 hover:text-cyan-600 transition-colors uppercase tracking-widest">Value</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="overview" class="relative pt-32 pb-20 overflow-hidden tech-grid min-h-[80vh] flex items-center bg-slate-50">
+        <div class="absolute top-1/4 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-flex items-center px-3 py-1 rounded border border-cyan-500/30 bg-cyan-500/10 text-cyan-700 text-xs font-bold tracking-widest uppercase mb-6">
+                    IT Governance Standard
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold text-slate-900 mb-6 leading-tight font-heading">
+                    Control Objectives for <br>
+                    <span class="text-transparent bg-clip-text accent-gradient glow-text">Information & Related Technology</span>
+                </h1>
+                <p class="text-xl text-slate-600 mb-10 font-light">
+                    Created by <strong class="text-slate-900">ISACA</strong>. The premier framework bridging the gap between technical issues, business risks, and control requirements.
+                </p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto border-t border-slate-200 pt-8">
+                    <div class="text-center">
+                        <span class="block text-3xl font-bold text-slate-800 font-heading">34</span>
+                        <span class="text-xs text-cyan-700 uppercase tracking-widest">Processes</span>
+                    </div>
+                    <div class="text-center border-l border-slate-200">
+                        <span class="block text-3xl font-bold text-slate-800 font-heading">210</span>
+                        <span class="text-xs text-cyan-700 uppercase tracking-widest">Objectives</span>
+                    </div>
+                    <div class="text-center border-l border-slate-200">
+                        <span class="block text-3xl font-bold text-slate-800 font-heading">4</span>
+                        <span class="text-xs text-cyan-700 uppercase tracking-widest">Domains</span>
+                    </div>
+                    <div class="text-center border-l border-slate-200">
+                        <span class="block text-3xl font-bold text-slate-800 font-heading"><i class="fas fa-globe"></i></span>
+                        <span class="text-xs text-cyan-700 uppercase tracking-widest">Global</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="domains" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12 flex items-end justify-between border-b border-slate-200 pb-4">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 font-heading">Structure of COBIT</h2>
+                    <p class="text-slate-500 mt-2">The framework is categorized into four high-level domains.</p>
+                </div>
+                <i class="fas fa-sitemap text-4xl text-slate-200"></i>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass-panel p-8 rounded-xl domain-card border-l-4 border-l-blue-500 bg-white">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-600 text-xl">
+                            <i class="fas fa-chess"></i>
+                        </div>
+                        <span class="text-slate-400 font-heading text-lg font-bold">01</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2 font-heading">Planning and Organization</h3>
+                    <p class="text-slate-600 text-sm">Defines the strategy and tactics, and concerns the identification of the way IT can best contribute to the achievement of the business objectives.</p>
+                </div>
+
+                <div class="glass-panel p-8 rounded-xl domain-card border-l-4 border-l-cyan-500 bg-white">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center text-cyan-600 text-xl">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <span class="text-slate-400 font-heading text-lg font-bold">02</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2 font-heading">Acquisition and Implementation</h3>
+                    <p class="text-slate-600 text-sm">To realize the IT strategy, IT solutions need to be identified, developed or acquired, as well as implemented and integrated into the business process.</p>
+                </div>
+
+                <div class="glass-panel p-8 rounded-xl domain-card border-l-4 border-l-indigo-500 bg-white">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center text-indigo-600 text-xl">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <span class="text-slate-400 font-heading text-lg font-bold">03</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2 font-heading">Delivery and Support</h3>
+                    <p class="text-slate-600 text-sm">Concerned with the actual delivery of required services, which includes service delivery, management of security and continuity, service support for users, and management of data.</p>
+                </div>
+
+                <div class="glass-panel p-8 rounded-xl domain-card border-l-4 border-l-purple-500 bg-white">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-600 text-xl">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span class="text-slate-400 font-heading text-lg font-bold">04</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2 font-heading">Monitoring and Evaluation</h3>
+                    <p class="text-slate-600 text-sm">All IT processes need to be regularly assessed over time for their quality and compliance with control requirements.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="resources" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 font-heading mb-6">IT Resource Management</h2>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        COBIT guides organizations on utilizing specific IT resources to manage domains and processes effectively. This ensures business requirements like <span class="text-cyan-600 font-semibold">compliance</span>, <span class="text-cyan-600 font-semibold">efficiency</span>, <span class="text-cyan-600 font-semibold">integrity</span>, and <span class="text-cyan-600 font-semibold">availability</span> are met.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm">
+                            <i class="fas fa-code w-8 text-cyan-600"></i>
+                            <span class="text-slate-800 font-medium">Applications</span>
+                        </div>
+                        <div class="flex items-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm">
+                            <i class="fas fa-database w-8 text-cyan-600"></i>
+                            <span class="text-slate-800 font-medium">Information</span>
+                        </div>
+                        <div class="flex items-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm">
+                            <i class="fas fa-server w-8 text-cyan-600"></i>
+                            <span class="text-slate-800 font-medium">Infrastructure</span>
+                        </div>
+                        <div class="flex items-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm">
+                            <i class="fas fa-users w-8 text-cyan-600"></i>
+                            <span class="text-slate-800 font-medium">People</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-2xl blur-lg opacity-20"></div>
+                    <div id="value" class="relative bg-white border border-slate-200 rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-xl font-bold text-slate-900 font-heading mb-6 border-b border-slate-100 pb-2">Business Value Proposition</h3>
+                        
+                        <div class="flex gap-4 mb-6">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Management Model</h4>
+                                <p class="text-sm text-slate-500">Equips business managers with a model to deliver value and improve risk management.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 mb-6">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-shield-alt text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">System Integrity</h4>
+                                <p class="text-sm text-slate-500">Ensures the integrity of information systems, applicable across all industries.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-gavel text-purple-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Compliance & Governance</h4>
+                                <p class="text-sm text-slate-500">Helps businesses comply with laws, regulations, and contractual arrangements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center items-center gap-2 mb-4">
+                <i class="fas fa-network-wired text-cyan-600 text-xl"></i>
+                <span class="text-xl font-heading font-bold text-slate-600">COBIT Framework</span>
+            </div>
+            <p class="text-slate-500 text-sm max-w-md mx-auto">
+                Control Objectives for Information and Related Technology. <br>
+                A standard for IT Governance provided by ISACA.
+            </p>
+            <div class="mt-8 flex justify-center space-x-6 text-slate-500">
+                <a href="#" class="hover:text-cyan-600 transition-colors"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-cyan-600 transition-colors"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="hover:text-cyan-600 transition-colors"><i class="fas fa-globe"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                // Only scroll if the target element exists
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                } else {
+                    console.warn('Target element not found:', targetId);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

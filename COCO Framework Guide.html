@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COCO Framework Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap');
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #fcfcfc;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .hero-pattern {
+            background-color: #ffffff;
+            background-image: radial-gradient(#ef4444 0.5px, transparent 0.5px), radial-gradient(#ef4444 0.5px, #ffffff 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            opacity: 0.05;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #b91c1c 0%, #ef4444 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-pop {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .card-pop:hover {
+            transform: scale(1.02);
+        }
+
+        /* Connecting lines for large screens */
+        .connector-line {
+            display: none;
+        }
+        @media (min-width: 1024px) {
+            .connector-line {
+                display: block;
+                position: absolute;
+                height: 4px;
+                background: #e5e7eb;
+                top: 50%;
+                z-index: 0;
+            }
+        }
+    </style>
+</head>
+<body class="text-slate-700">
+
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center text-white font-bold">C</div>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">COCO Framework</span>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#structure" class="text-sm font-medium text-slate-500 hover:text-red-600 transition-colors">Structure</a>
+                    <a href="#scope" class="text-sm font-medium text-slate-500 hover:text-red-600 transition-colors">Scope</a>
+                    <a href="#assessment" class="text-sm font-medium text-slate-500 hover:text-red-600 transition-colors">Assessment</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative overflow-hidden bg-white pt-16 pb-20 lg:pt-24">
+        <div class="absolute inset-0 hero-pattern z-0"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 text-center">
+            <div class="inline-flex items-center px-3 py-1 rounded-full bg-red-50 text-red-600 text-sm font-semibold mb-6 border border-red-100">
+                <i class="fas fa-leaf mr-2"></i> Criteria of Control
+            </div>
+            <h1 class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl mb-6">
+                Improving Organizational <span class="gradient-text">Performance</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-xl text-slate-500 mb-10">
+                Developed by the Canadian Institute of Chartered Accountants (1992), focusing on decision-making, risk management, and corporate governance.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-red-500">
+                    <i class="fas fa-balance-scale text-3xl text-red-500 mb-3"></i>
+                    <h3 class="font-bold text-lg">Governance</h3>
+                    <p class="text-sm text-slate-500">Enhancing corporate oversight.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-teal-500">
+                    <i class="fas fa-chart-line text-3xl text-teal-500 mb-3"></i>
+                    <h3 class="font-bold text-lg">Performance</h3>
+                    <p class="text-sm text-slate-500">Optimizing results & decisions.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-indigo-500">
+                    <i class="fas fa-shield-alt text-3xl text-indigo-500 mb-3"></i>
+                    <h3 class="font-bold text-lg">Control</h3>
+                    <p class="text-sm text-slate-500">Managing risk effectively.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Framework Structure (The 4 Areas) -->
+    <div id="structure" class="bg-slate-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Framework Structure</h2>
+                <p class="mt-4 text-lg text-slate-600">The 20 criteria are grouped into 4 distinct, interacting areas.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                
+                <!-- 1. Purpose -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-pop relative z-10">
+                    <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-2xl mb-6">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">1. Purpose</h3>
+                    <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full mb-4">DIRECTION</span>
+                    <p class="text-slate-600 text-sm">Understanding the organization's direction, risks, and policies. It sets the stage for what needs to be achieved.</p>
+                </div>
+
+                <!-- 2. Commitment -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-pop relative z-10">
+                    <div class="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center text-red-600 text-2xl mb-6">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">2. Commitment</h3>
+                    <span class="inline-block px-3 py-1 bg-red-50 text-red-700 text-xs font-bold rounded-full mb-4">IDENTITY & VALUES</span>
+                    <p class="text-slate-600 text-sm">The shared ethical values, integrity, and human resource policies that align identity with purpose.</p>
+                </div>
+
+                <!-- 3. Capability -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-pop relative z-10">
+                    <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-600 text-2xl mb-6">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">3. Capability</h3>
+                    <span class="inline-block px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-full mb-4">COMPETENCE</span>
+                    <p class="text-slate-600 text-sm">Possessing the knowledge, skills, tools, and information required to execute the task effectively.</p>
+                </div>
+
+                <!-- 4. Monitoring -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-pop relative z-10">
+                    <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-600 text-2xl mb-6">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">4. Monitoring</h3>
+                    <span class="inline-block px-3 py-1 bg-purple-50 text-purple-700 text-xs font-bold rounded-full mb-4">LEARNING & EVOLUTION</span>
+                    <p class="text-slate-600 text-sm">Reviewing internal and external environments to learn, adapt, and evolve the organization over time.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Scope & Assessment Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <!-- Scope of Control -->
+            <div id="scope" class="bg-slate-900 rounded-3xl p-10 text-white relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 bg-white opacity-5 rounded-full"></div>
+                <div class="flex items-start gap-6">
+                    <div class="flex-shrink-0 w-16 h-16 bg-white/10 rounded-full flex items-center justify-center text-2xl">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4">Scope of Control</h2>
+                        <p class="text-slate-300 leading-relaxed mb-6">
+                            Control is not just a top-down mandate. While it involves the entire organization, COCO emphasizes that it <strong>starts at the individual level</strong>.
+                        </p>
+                        <div class="bg-white/10 rounded-xl p-4 flex items-center gap-4">
+                            <i class="fas fa-user text-red-400 text-xl"></i>
+                            <span class="font-medium">Every employee plays a role.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assessing Effectiveness -->
+            <div id="assessment" class="bg-gradient-to-br from-red-500 to-rose-600 rounded-3xl p-10 text-white shadow-xl">
+                <div class="flex items-start gap-6">
+                    <div class="flex-shrink-0 w-16 h-16 bg-white/20 rounded-full flex items-center justify-center text-2xl">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4">Assessing Effectiveness</h2>
+                        <p class="text-red-100 leading-relaxed mb-6">
+                            Effectiveness isn't a guess. To assess whether controls are working:
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle mt-1 mr-3 text-red-200"></i>
+                                <span>Identify specific criteria within the 4 areas.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle mt-1 mr-3 text-red-200"></i>
+                                <span>Examine controls currently in place for each.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle mt-1 mr-3 text-red-200"></i>
+                                <span>Verify they address the specific requirement.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <div class="flex items-center gap-2 mb-6">
+                <div class="w-6 h-6 bg-red-600 rounded flex items-center justify-center text-white text-xs font-bold">C</div>
+                <span class="font-bold text-slate-900">COCO Framework Reference</span>
+            </div>
+            <p class="text-slate-500 text-sm text-center mb-8">
+                Helping organizations achieve their potential through better control criteria.
+            </p>
+            <div class="text-slate-400 text-xs">
+                &copy; Based on CICA Guidelines 1992
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

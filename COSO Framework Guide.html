@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COSO Framework Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .glass-header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Header -->
+    <nav class="fixed w-full z-50 glass-header top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fas fa-cubes text-blue-600 text-2xl"></i>
+                    <span class="font-bold text-xl tracking-tight text-slate-800">COSO<span class="text-blue-600">Framework</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#overview" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Overview</a>
+                        <a href="#components" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Components</a>
+                        <a href="#objectives" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Objectives</a>
+                        <a href="#limitations" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Limitations</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="pt-24 pb-12 bg-white" id="overview">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl">
+                    <span class="block">Committee of Sponsoring</span>
+                    <span class="block gradient-text">Organizations Framework</span>
+                </h1>
+                <p class="mt-3 max-w-md mx-auto text-base text-slate-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                    The definitive guide to establishing better internal controls, minimizing risk, and ensuring organizational success.
+                </p>
+                <div class="mt-8 flex justify-center gap-4">
+                    <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                        <i class="fas fa-calendar-alt mr-2"></i> Introduced in 1992
+                    </span>
+                    <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                        <i class="fas fa-check-circle mr-2"></i> 17 Principles
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Grid Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- Introduction Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 card-hover relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-blue-50 rounded-full blur-xl"></div>
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">What is COSO?</h3>
+                <p class="text-slate-600 leading-relaxed mb-4">
+                    The COSO Integrated Framework provides comprehensive guidance on establishing better internal controls to help companies achieve their objectives. It is the gold standard for internal control systems (ICS).
+                </p>
+                <div class="flex items-center text-blue-600 font-semibold">
+                    <i class="fas fa-shield-alt mr-2"></i> Internal Control Excellence
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 card-hover relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-green-50 rounded-full blur-xl"></div>
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Core Focus Areas</h3>
+                <div class="flex flex-col gap-3">
+                    <div class="flex items-center p-3 bg-slate-50 rounded-lg">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3"><i class="fas fa-cogs"></i></div>
+                        <span class="font-medium">Operations</span>
+                    </div>
+                    <div class="flex items-center p-3 bg-slate-50 rounded-lg">
+                        <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 mr-3"><i class="fas fa-file-invoice-dollar"></i></div>
+                        <span class="font-medium">Financial Reporting</span>
+                    </div>
+                    <div class="flex items-center p-3 bg-slate-50 rounded-lg">
+                        <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 mr-3"><i class="fas fa-balance-scale"></i></div>
+                        <span class="font-medium">Compliance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5 Components Section -->
+        <div id="components" class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900">The 5 Components & 17 Principles</h2>
+                <p class="mt-4 text-lg text-slate-600">These 17 principles must be present and functioning in every entity for an effective Internal Control System.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- 1. Control Environment -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover border-t-4 border-indigo-500 lg:col-span-1">
+                    <div class="p-6 bg-indigo-50">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-indigo-900">1. Control Environment</h3>
+                            <i class="fas fa-landmark text-2xl text-indigo-400"></i>
+                        </div>
+                        <p class="text-indigo-700 text-sm mt-1">Foundation of the system</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center text-xs font-bold mt-0.5 mr-3">1</span>
+                                <span class="text-slate-700">Demonstrates commitment to integrity and ethical values.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center text-xs font-bold mt-0.5 mr-3">2</span>
+                                <span class="text-slate-700">Exercises oversight responsibility.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center text-xs font-bold mt-0.5 mr-3">3</span>
+                                <span class="text-slate-700">Establishes structure, authority, and responsibility.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center text-xs font-bold mt-0.5 mr-3">4</span>
+                                <span class="text-slate-700">Demonstrates commitment to competence.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center text-xs font-bold mt-0.5 mr-3">5</span>
+                                <span class="text-slate-700">Enforces accountability.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. Risk Assessment -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover border-t-4 border-orange-500 lg:col-span-1">
+                    <div class="p-6 bg-orange-50">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-orange-900">2. Risk Assessment</h3>
+                            <i class="fas fa-exclamation-triangle text-2xl text-orange-400"></i>
+                        </div>
+                        <p class="text-orange-700 text-sm mt-1">Identifying what could go wrong</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center text-xs font-bold mt-0.5 mr-3">6</span>
+                                <span class="text-slate-700">Specifies suitable objectives.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center text-xs font-bold mt-0.5 mr-3">7</span>
+                                <span class="text-slate-700">Identifies and analyzes risks.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center text-xs font-bold mt-0.5 mr-3">8</span>
+                                <span class="text-slate-700">Assesses fraud risks.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center text-xs font-bold mt-0.5 mr-3">9</span>
+                                <span class="text-slate-700">Identifies and analyzes significant changes.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3. Control Activities -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover border-t-4 border-emerald-500 lg:col-span-1">
+                    <div class="p-6 bg-emerald-50">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-emerald-900">3. Control Activities</h3>
+                            <i class="fas fa-tasks text-2xl text-emerald-400"></i>
+                        </div>
+                        <p class="text-emerald-700 text-sm mt-1">Actions to mitigate risks</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold mt-0.5 mr-3">10</span>
+                                <span class="text-slate-700">Selects and develops control activities.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold mt-0.5 mr-3">11</span>
+                                <span class="text-slate-700">Selects and develops general controls over technology.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold mt-0.5 mr-3">12</span>
+                                <span class="text-slate-700">Deploys through policies and procedures.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 4. Info & Communication -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover border-t-4 border-sky-500 lg:col-span-1 lg:col-start-1 lg:ml-auto w-full">
+                    <!-- Note: Adjusted grid placement for centering on large screens if desired, but sticking to flow for now -->
+                     <div class="p-6 bg-sky-50">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-sky-900">4. Info & Communication</h3>
+                            <i class="fas fa-network-wired text-2xl text-sky-400"></i>
+                        </div>
+                        <p class="text-sky-700 text-sm mt-1">Flow of information</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center text-xs font-bold mt-0.5 mr-3">13</span>
+                                <span class="text-slate-700">Uses relevant, quality information.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center text-xs font-bold mt-0.5 mr-3">14</span>
+                                <span class="text-slate-700">Communicates internally.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center text-xs font-bold mt-0.5 mr-3">15</span>
+                                <span class="text-slate-700">Communicates externally.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 5. Monitoring Activities -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover border-t-4 border-rose-500 lg:col-span-1">
+                    <div class="p-6 bg-rose-50">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-rose-900">5. Monitoring Activities</h3>
+                            <i class="fas fa-binoculars text-2xl text-rose-400"></i>
+                        </div>
+                        <p class="text-rose-700 text-sm mt-1">Assessing performance over time</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center text-xs font-bold mt-0.5 mr-3">16</span>
+                                <span class="text-slate-700">Conducts ongoing and/or separate evaluations.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center text-xs font-bold mt-0.5 mr-3">17</span>
+                                <span class="text-slate-700">Evaluates and communicates deficiencies.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Decorative Filler or Summary Card for Grid Balance -->
+                <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg overflow-hidden flex flex-col justify-center items-center text-white p-8 text-center lg:col-span-1">
+                    <i class="fas fa-check-double text-5xl text-blue-400 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Total Integration</h3>
+                    <p class="text-slate-300">These components work together to form an integrated system that reacts dynamically to changing conditions.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Objectives Section -->
+        <div id="objectives" class="mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-8 border-l-8 border-blue-600 pl-4">Objectives of Framework</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Operations -->
+                <div class="group bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition-colors">
+                    <div class="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Operations</h3>
+                    <p class="text-slate-600">Focuses on efficiency and effectiveness of business operations, including performance and profitability goals and safeguarding assets.</p>
+                </div>
+                <!-- Reporting -->
+                <div class="group bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-green-300 transition-colors">
+                    <div class="h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center text-green-600 text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Reporting</h3>
+                    <p class="text-slate-600">Pertains to internal and external financial and non-financial reporting. Ensures reliability, timeliness, and transparency.</p>
+                </div>
+                <!-- Compliance -->
+                <div class="group bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-purple-300 transition-colors">
+                    <div class="h-12 w-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Compliance</h3>
+                    <p class="text-slate-600">Adhering to laws and regulations to which the entity is subject, ensuring legal conformity.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Limitations Section -->
+        <div id="limitations" class="bg-red-50 rounded-3xl p-8 md:p-12 border border-red-100">
+            <div class="flex flex-col md:flex-row gap-8 items-start">
+                <div class="md:w-1/3">
+                    <h2 class="text-3xl font-bold text-red-900 mb-4">Limitations</h2>
+                    <div class="text-red-800 opacity-80 mb-6">
+                        <p>No matter how well-designed, internal control can only provide <strong>reasonable assurance</strong> to management and the board.</p>
+                    </div>
+                    <div class="inline-flex items-center px-4 py-2 bg-red-200 text-red-800 rounded-lg font-semibold">
+                        <i class="fas fa-shield-alt mr-2"></i> Not Absolute Assurance
+                    </div>
+                </div>
+                <div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-red-400">
+                        <h4 class="font-bold text-slate-800">Human Error</h4>
+                        <p class="text-sm text-slate-600 mt-1">Mistakes in judgment or simple errors due to fatigue or distraction.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-red-400">
+                        <h4 class="font-bold text-slate-800">Management Override</h4>
+                        <p class="text-sm text-slate-600 mt-1">High-level management may overrule prescribed policies.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-red-400">
+                        <h4 class="font-bold text-slate-800">Collusion</h4>
+                        <p class="text-sm text-slate-600 mt-1">Two or more people conspiring to circumvent controls.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-red-400">
+                        <h4 class="font-bold text-slate-800">External Events</h4>
+                        <p class="text-sm text-slate-600 mt-1">Events beyond the organization's control.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="text-2xl font-bold text-white tracking-tight">COSO<span class="text-blue-500">Framework</span></span>
+                <p class="text-sm mt-2">Committee of Sponsoring Organizations of the Treadway Commission</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fas fa-globe text-xl"></i></a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-8 border-t border-slate-800 text-center text-sm">
+            <p>&copy; COSO Integrated Framework Reference Guide. Educational purpose only.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
