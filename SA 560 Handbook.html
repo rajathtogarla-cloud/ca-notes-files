@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA 560 Subsequent Events Timeline</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        audit: {
+                            light: '#e0f2fe',
+                            DEFAULT: '#0284c7',
+                            dark: '#0c4a6e',
+                        },
+                        warning: {
+                            light: '#fef3c7',
+                            DEFAULT: '#d97706',
+                            dark: '#78350f',
+                        },
+                        danger: {
+                            light: '#fee2e2',
+                            DEFAULT: '#dc2626',
+                            dark: '#7f1d1d',
+                        },
+                        success: {
+                            light: '#dcfce7',
+                            DEFAULT: '#16a34a',
+                            dark: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, #3b82f6, #d97706, #dc2626);
+            z-index: 0;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-line {
+                left: 20px;
+            }
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
+
+    <header class="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-12 px-4 shadow-lg sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto text-center">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 tracking-tight">SA 560 Subsequent Events</h1>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto">Events between the financial statement date and the auditor's report date, and facts that become known to the auditor after the date of the auditor's report.</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-12">
+        
+        <div class="mb-16 bg-white rounded-2xl shadow-md border-l-8 border-audit p-6 md:p-8 fade-in-up">
+            <div class="flex items-start gap-4">
+                <div class="bg-audit-light p-3 rounded-full text-audit">
+                    <i class="fas fa-bullseye text-2xl"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-800 mb-2">Objectives</h2>
+                    <ul class="list-disc list-inside space-y-2 text-slate-600">
+                        <li>Obtain evidence on events requiring adjustment/disclosure between FS date and Audit Report date.</li>
+                        <li>Respond to facts becoming known <strong>after</strong> the Audit Report date that might change the report.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16 fade-in-up">
+            <div class="bg-white p-4 rounded-xl shadow border border-slate-200 hover:shadow-lg transition-shadow">
+                <div class="text-xs font-bold text-blue-600 uppercase mb-1">Start Point</div>
+                <h3 class="font-bold text-lg mb-1">Date of FS</h3>
+                <p class="text-sm text-slate-500">End date of the latest period covered.</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow border border-slate-200 hover:shadow-lg transition-shadow">
+                <div class="text-xs font-bold text-indigo-600 uppercase mb-1">Mgmt Responsibility</div>
+                <h3 class="font-bold text-lg mb-1">Date of Approval</h3>
+                <p class="text-sm text-slate-500">Mgmt asserts responsibility for FS.</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow border border-slate-200 hover:shadow-lg transition-shadow">
+                <div class="text-xs font-bold text-amber-600 uppercase mb-1">Critical Date</div>
+                <h3 class="font-bold text-lg mb-1">Date of Audit Report</h3>
+                <p class="text-sm text-slate-500">Date auditor issues report (SA 700).</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow border border-slate-200 hover:shadow-lg transition-shadow">
+                <div class="text-xs font-bold text-red-600 uppercase mb-1">Public Release</div>
+                <h3 class="font-bold text-lg mb-1">Date Issued</h3>
+                <p class="text-sm text-slate-500">Available to third parties.</p>
+            </div>
+        </div>
+
+        <div class="relative py-8">
+            <div class="timeline-line"></div>
+
+            <div class="relative mb-16 flex flex-col md:flex-row justify-between items-center w-full fade-in-up">
+                <div class="w-full md:w-5/12 order-1 md:order-1 md:text-right pr-0 md:pr-8">
+                    <div class="bg-slate-800 text-white p-4 rounded-lg shadow-lg inline-block">
+                        <h3 class="font-bold text-xl">Date of Financial Statements</h3>
+                        <p class="text-sm opacity-80">Period End</p>
+                    </div>
+                </div>
+                <div class="z-10 order-1 bg-slate-200 border-4 border-slate-800 rounded-full w-8 h-8 flex items-center justify-center absolute left-5 md:left-1/2 md:-translate-x-1/2 top-4 md:top-auto">
+                </div>
+                <div class="w-full md:w-5/12 order-1 md:order-1 pl-12 md:pl-8 mt-2 md:mt-0">
+                    </div>
+            </div>
+
+            <div class="relative mb-16 flex flex-col md:flex-row justify-between items-center w-full fade-in-up">
+                <div class="w-full md:w-5/12 order-2 md:order-1 md:text-right pr-0 md:pr-8 pl-12 md:pl-0">
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-audit">
+                        <h3 class="text-xl font-bold text-audit-dark mb-3">Audit Procedures to Identify Subsequent Events</h3>
+                        <p class="text-sm text-slate-600 mb-3">Auditor must perform procedures for the period between FS Date and Report Date.</p>
+                        
+                        <div class="text-left bg-slate-50 p-3 rounded-lg border border-slate-200">
+                            <h4 class="font-semibold text-sm mb-2 text-slate-700">Inquiring Management on:</h4>
+                            <ul class="text-sm space-y-1 text-slate-600">
+                                <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i> New commitments/borrowings</li>
+                                <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i> Asset sales or acquisitions</li>
+                                <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i> Appropriated/Destroyed assets</li>
+                                <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i> Contingencies developments</li>
+                                <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i> Unusual accounting adjustments</li>
+                                <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i> Going concern challenges</li>
+                            </ul>
+                        </div>
+                        <div class="mt-3 flex gap-2">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded font-medium">Read Minutes</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded font-medium">Review Interim FS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="z-10 bg-audit text-white border-4 border-white shadow-md rounded-full w-12 h-12 flex items-center justify-center absolute left-3 md:left-1/2 md:-translate-x-1/2 top-0 md:top-1/2 md:-translate-y-1/2">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="w-full md:w-5/12 order-2 md:order-1 pl-12 md:pl-8">
+                     </div>
+            </div>
+
+            <div class="relative mb-20 flex flex-col md:flex-row justify-between items-center w-full fade-in-up">
+                <div class="w-full md:w-5/12 order-1 md:order-1 md:text-right pr-0 md:pr-8">
+                    </div>
+                <div class="z-10 bg-white border-4 border-audit-dark rounded-full w-10 h-10 flex items-center justify-center absolute left-4 md:left-1/2 md:-translate-x-1/2">
+                    <i class="fas fa-file-signature text-audit-dark text-sm"></i>
+                </div>
+                <div class="w-full md:w-5/12 order-1 md:order-1 pl-12 md:pl-8">
+                    <div class="bg-audit-dark text-white p-3 rounded-lg shadow-lg inline-block">
+                        <h3 class="font-bold text-lg">Date of Auditor's Report</h3>
+                        <p class="text-xs opacity-80">SA 700</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative mb-24 flex flex-col md:flex-row justify-between items-center w-full fade-in-up">
+                <div class="w-full md:w-5/12 order-2 md:order-1 md:text-right pr-0 md:pr-8 pl-12 md:pl-0">
+                    </div>
+                <div class="z-10 bg-warning text-white border-4 border-white shadow-md rounded-full w-12 h-12 flex items-center justify-center absolute left-3 md:left-1/2 md:-translate-x-1/2 top-0 md:top-12">
+                    <i class="fas fa-exclamation"></i>
+                </div>
+                <div class="w-full md:w-5/12 order-2 md:order-1 pl-12 md:pl-8">
+                    <div class="bg-white rounded-xl shadow-lg border-t-4 border-warning overflow-hidden">
+                        <div class="p-6 bg-warning-light/30">
+                            <h3 class="text-xl font-bold text-warning-dark mb-1">CASE I: The Gap Period</h3>
+                            <p class="text-xs font-bold uppercase tracking-wide text-slate-500 mb-3">After Report, Before Issue</p>
+                            <p class="text-sm text-slate-700 mb-4">Generally, no obligation to perform procedures. However, if a fact becomes known that would have affected the report:</p>
+                            
+                            <div class="bg-white p-3 rounded border border-warning/20 mb-4">
+                                <h4 class="font-bold text-sm text-slate-700">Immediate Actions:</h4>
+                                <ol class="list-decimal list-inside text-sm text-slate-600">
+                                    <li>Discuss with Management/TCWG.</li>
+                                    <li>Determine if FS needs amendment.</li>
+                                    <li>Inquire how management will address it.</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 text-sm">
+                            <div class="p-4 bg-success-light border-r border-white/50">
+                                <h4 class="font-bold text-success-dark mb-2"><i class="fas fa-thumbs-up mr-1"></i> Mgmt Amends</h4>
+                                <ul class="list-disc list-inside text-slate-700 text-xs space-y-1">
+                                    <li>Audit the amendment.</li>
+                                    <li>Obtain evidence.</li>
+                                    <li>Issue new report.</li>
+                                </ul>
+                            </div>
+                            <div class="p-4 bg-danger-light">
+                                <h4 class="font-bold text-danger-dark mb-2"><i class="fas fa-thumbs-down mr-1"></i> Mgmt Refuses</h4>
+                                <ul class="list-disc list-inside text-slate-700 text-xs space-y-1">
+                                    <li><strong>Not issued yet?</strong> Modify opinion (SA 705).</li>
+                                    <li><strong>Already issued?</strong> Notify mgmt to stop distribution.</li>
+                                    <li><strong>Still issued?</strong> Prevent reliance on report.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative mb-20 flex flex-col md:flex-row justify-between items-center w-full fade-in-up">
+                <div class="w-full md:w-5/12 order-1 md:order-1 md:text-right pr-0 md:pr-8">
+                    <div class="bg-slate-700 text-white p-3 rounded-lg shadow-lg inline-block">
+                        <h3 class="font-bold text-lg">Date FS Issued</h3>
+                        <p class="text-xs opacity-80">Available to 3rd Parties</p>
+                    </div>
+                </div>
+                <div class="z-10 bg-white border-4 border-slate-700 rounded-full w-10 h-10 flex items-center justify-center absolute left-4 md:left-1/2 md:-translate-x-1/2">
+                    <i class="fas fa-book-open text-slate-700 text-sm"></i>
+                </div>
+                <div class="w-full md:w-5/12 order-1 md:order-1 pl-12 md:pl-8">
+                    </div>
+            </div>
+
+            <div class="relative pb-12 flex flex-col md:flex-row justify-between items-center w-full fade-in-up">
+                <div class="w-full md:w-5/12 order-2 md:order-1 md:text-right pr-0 md:pr-8 pl-12 md:pl-0">
+                    <div class="bg-white rounded-xl shadow-lg border-t-4 border-danger overflow-hidden">
+                        <div class="p-6 bg-danger-light/20">
+                            <h3 class="text-xl font-bold text-danger-dark mb-1">CASE II: Post-Issuance</h3>
+                            <p class="text-xs font-bold uppercase tracking-wide text-slate-500 mb-3">After FS Issued</p>
+                            <p class="text-sm text-slate-700 mb-4">No obligation to check. But if a fact appears that would have changed the report:</p>
+                            
+                            <div class="bg-white p-3 rounded border border-danger/20 mb-4 text-left">
+                                <h4 class="font-bold text-sm text-slate-700">Actions:</h4>
+                                <div class="flex gap-2 flex-wrap">
+                                    <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border">Discuss</span>
+                                    <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border">Determine Amendment</span>
+                                    <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border">Inquire Strategy</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 text-sm">
+                            <div class="p-4 bg-white border-b border-slate-100">
+                                <h4 class="font-bold text-success-dark mb-2 text-left md:text-right">Option A: Mgmt Amends</h4>
+                                <ul class="text-slate-700 text-xs space-y-2 text-left md:text-right">
+                                    <li>Audit the amendment.</li>
+                                    <li>Review notification to previous recipients.</li>
+                                    <li><strong>New Auditor's Report</strong> with <span class="bg-yellow-100 px-1 rounded">Emphasis of Matter</span> paragraph.</li>
+                                </ul>
+                            </div>
+                            <div class="p-4 bg-danger/5">
+                                <h4 class="font-bold text-danger-dark mb-2 text-left md:text-right">Option B: Mgmt Fails to Act</h4>
+                                <p class="text-xs text-slate-700 text-left md:text-right">
+                                    Auditor MUST take action to <span class="font-bold underline">prevent reliance</span> on the previously issued report and financial statements.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="z-10 bg-danger text-white border-4 border-white shadow-md rounded-full w-12 h-12 flex items-center justify-center absolute left-3 md:left-1/2 md:-translate-x-1/2 top-0 md:top-12">
+                    <i class="fas fa-skull-crossbones"></i>
+                </div>
+                <div class="w-full md:w-5/12 order-2 md:order-1 pl-12 md:pl-8">
+                     </div>
+            </div>
+
+            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-slate-300 rounded-full"></div>
+
+        </div>
+
+    </main>
+
+    <footer class="bg-slate-800 text-slate-400 py-6 text-center text-sm">
+        <p>Reference: SA 560 Subsequent Events - Auditing Standards</p>
+    </footer>
+
+    <script>
+        // Simple Intersection Observer for fade-in animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const elements = document.querySelectorAll('.fade-in-up');
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
