@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditor Reporting Obligations | Companies Act, 2013</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        legal: {
+                            50: '#f0f4f8',
+                            100: '#d9e2ec',
+                            200: '#bcccdc',
+                            300: '#9fb3c8',
+                            400: '#829ab1',
+                            500: '#627d98',
+                            600: '#486581',
+                            700: '#334e68',
+                            800: '#243b53',
+                            900: '#102a43',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .section-icon {
+            background: linear-gradient(135deg, #243b53 0%, #486581 100%);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e0; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a0aec0; 
+        }
+    </style>
+</head>
+<body class="bg-legal-50 text-slate-800 antialiased relative">
+
+    <!-- Mobile Nav Toggle -->
+    <div class="lg:hidden fixed bottom-6 right-6 z-50">
+        <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="bg-legal-800 text-white p-4 rounded-full shadow-lg hover:bg-legal-700 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-black bg-opacity-50 flex justify-end">
+        <div class="bg-white w-64 h-full p-6 overflow-y-auto shadow-xl">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="font-bold text-legal-800">Sections</h3>
+                <button onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-4">
+                <a href="#section-143-1" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="text-sm font-medium hover:text-legal-600">1. Inquiry (Sec 143(1))</a>
+                <a href="#section-143-2" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="text-sm font-medium hover:text-legal-600">2. Accounts (Sec 143(2))</a>
+                <a href="#section-143-3" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="text-sm font-medium hover:text-legal-600">3. Additional (Sec 143(3))</a>
+                <a href="#other-legal" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="text-sm font-medium hover:text-legal-600">4. Other Legal Req</a>
+                <a href="#frauds" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="text-sm font-medium hover:text-legal-600">5. Frauds (Sec 143(12))</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Header -->
+    <header class="bg-legal-900 text-white pt-16 pb-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-legal-700 rounded-full opacity-20 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-blue-500 rounded-full opacity-10 blur-2xl"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                <div>
+                    <div class="inline-block px-3 py-1 rounded-full bg-legal-800 border border-legal-600 text-xs font-semibold tracking-wider uppercase mb-4 text-blue-200">
+                        Companies Act, 2013
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-serif font-bold leading-tight mb-4">
+                        Auditor Reporting Obligations
+                    </h1>
+                    <p class="text-legal-200 text-lg max-w-2xl">
+                        A comprehensive guide to Reporting on Other Legal & Regulatory Requirements.
+                    </p>
+                </div>
+                <!-- Print Button -->
+                <button onclick="window.print()" class="hidden md:flex items-center space-x-2 bg-white text-legal-900 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition shadow-lg mt-6 md:mt-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                    </svg>
+                    <span>Print Summary</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 pb-20">
+        <div class="flex flex-col lg:flex-row gap-8">
+            
+            <!-- Sidebar Navigation (Desktop) -->
+            <div class="hidden lg:block w-64 flex-shrink-0">
+                <div class="sticky top-8 space-y-1 bg-white rounded-xl shadow-lg p-4 border border-gray-100">
+                    <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3 px-2">Contents</p>
+                    <a href="#section-143-1" class="group flex items-center px-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-legal-50 hover:text-legal-700 transition-colors">
+                        <span class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-legal-500 mr-3"></span>
+                        1. Inquiry (Sec 143(1))
+                    </a>
+                    <a href="#section-143-2" class="group flex items-center px-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-legal-50 hover:text-legal-700 transition-colors">
+                        <span class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-legal-500 mr-3"></span>
+                        2. Accounts (Sec 143(2))
+                    </a>
+                    <a href="#section-143-3" class="group flex items-center px-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-legal-50 hover:text-legal-700 transition-colors">
+                        <span class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-legal-500 mr-3"></span>
+                        3. Additional (Sec 143(3))
+                    </a>
+                    <a href="#other-legal" class="group flex items-center px-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-legal-50 hover:text-legal-700 transition-colors">
+                        <span class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-legal-500 mr-3"></span>
+                        4. Other Legal Req
+                    </a>
+                    <a href="#frauds" class="group flex items-center px-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-legal-50 hover:text-legal-700 transition-colors">
+                        <span class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-legal-500 mr-3"></span>
+                        5. Frauds (Sec 143(12))
+                    </a>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <main class="flex-1 space-y-10">
+
+                <!-- Section 1 -->
+                <section id="section-143-1" class="glass-card rounded-2xl p-6 md:p-8 shadow-sm">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="h-10 w-10 rounded-lg section-icon flex items-center justify-center text-white font-bold">1</div>
+                        <h2 class="text-2xl font-serif font-bold text-gray-900">Inquiry on Specific Matters</h2>
+                        <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded border border-gray-200">Section 143(1)</span>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-6 border-l-4 border-legal-500 pl-4 italic">
+                        The auditor shall inquire into the following matters. <strong class="text-gray-900">Adverse comments must be reported with reasons.</strong>
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-4 bg-white rounded-lg border border-gray-100 hover:shadow-md transition-shadow">
+                            <h3 class="font-bold text-legal-800 flex items-center mb-2">
+                                <svg class="w-5 h-5 mr-2 text-legal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                Loans & Advances
+                            </h3>
+                            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                                <li>Are they properly secured?</li>
+                                <li>Are terms prejudicial to the company or its members?</li>
+                            </ul>
+                        </div>
+
+                        <div class="p-4 bg-white rounded-lg border border-gray-100 hover:shadow-md transition-shadow">
+                            <h3 class="font-bold text-legal-800 flex items-center mb-2">
+                                <svg class="w-5 h-5 mr-2 text-legal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                Book Entries
+                            </h3>
+                            <p class="text-sm text-gray-600">Whether transactions represented by book entries are prejudicial to the company’s interests.</p>
+                        </div>
+
+                        <div class="p-4 bg-white rounded-lg border border-gray-100 hover:shadow-md transition-shadow">
+                            <h3 class="font-bold text-legal-800 flex items-center mb-2">
+                                <svg class="w-5 h-5 mr-2 text-legal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                                Sale of Securities
+                            </h3>
+                            <p class="text-sm text-gray-600">Whether shares/securities are sold at a price less than the purchase price.<br><span class="text-xs text-gray-400">(Excludes Banking/Investment Companies)</span></p>
+                        </div>
+
+                        <div class="p-4 bg-white rounded-lg border border-gray-100 hover:shadow-md transition-shadow">
+                            <h3 class="font-bold text-legal-800 flex items-center mb-2">
+                                <svg class="w-5 h-5 mr-2 text-legal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                                Loans as Deposits
+                            </h3>
+                            <p class="text-sm text-gray-600">Whether loans/advances are incorrectly shown as deposits.</p>
+                        </div>
+
+                        <div class="p-4 bg-white rounded-lg border border-gray-100 hover:shadow-md transition-shadow">
+                            <h3 class="font-bold text-legal-800 flex items-center mb-2">
+                                <svg class="w-5 h-5 mr-2 text-legal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                                Personal Expenses
+                            </h3>
+                            <p class="text-sm text-gray-600">Whether personal expenses are charged to the revenue account.</p>
+                        </div>
+
+                        <div class="p-4 bg-white rounded-lg border border-gray-100 hover:shadow-md transition-shadow">
+                            <h3 class="font-bold text-legal-800 flex items-center mb-2">
+                                <svg class="w-5 h-5 mr-2 text-legal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                Shares Allotted for Cash
+                            </h3>
+                            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                                <li>Has cash actually been received?</li>
+                                <li>Is the position in books/balance sheet correct and not misleading?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 2 -->
+                <section id="section-143-2" class="glass-card rounded-2xl p-6 md:p-8 shadow-sm">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="h-10 w-10 rounded-lg section-icon flex items-center justify-center text-white font-bold">2</div>
+                        <h2 class="text-2xl font-serif font-bold text-gray-900">Reporting on Accounts Examined</h2>
+                        <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded border border-gray-200">Section 143(2)</span>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-legal-50 to-white p-6 rounded-xl border border-legal-100">
+                        <p class="font-medium text-lg text-legal-900 mb-4">The auditor must report whether financial statements provide a <span class="text-blue-600 font-bold decoration-wavy underline decoration-blue-300">True and Fair View</span> of:</p>
+                        
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                                <div class="text-legal-500 mb-2 flex justify-center">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                                </div>
+                                <span class="font-bold text-sm text-gray-800">State of Affairs</span>
+                                <span class="block text-xs text-gray-500">at year-end</span>
+                            </div>
+                            <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                                <div class="text-legal-500 mb-2 flex justify-center">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                </div>
+                                <span class="font-bold text-sm text-gray-800">Profit or Loss</span>
+                                <span class="block text-xs text-gray-500">for the year</span>
+                            </div>
+                            <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                                <div class="text-legal-500 mb-2 flex justify-center">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+                                </div>
+                                <span class="font-bold text-sm text-gray-800">Cash Flows</span>
+                                <span class="block text-xs text-gray-500">for the year</span>
+                            </div>
+                            <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                                <div class="text-legal-500 mb-2 flex justify-center">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                </div>
+                                <span class="font-bold text-sm text-gray-800">Rule 11</span>
+                                <span class="block text-xs text-gray-500">Specific Matters</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 3 -->
+                <section id="section-143-3" class="glass-card rounded-2xl p-6 md:p-8 shadow-sm">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="h-10 w-10 rounded-lg section-icon flex items-center justify-center text-white font-bold">3</div>
+                        <h2 class="text-2xl font-serif font-bold text-gray-900">Additional Reporting Requirements</h2>
+                        <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded border border-gray-200">Section 143(3)</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                        <!-- Checklist Items -->
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
+                                <svg class="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Info & Explanations</p>
+                                <p class="text-xs text-gray-500">Were they sought and obtained?</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
+                                <svg class="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Books of Account</p>
+                                <p class="text-xs text-gray-500">Maintained properly? Returns received?</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
+                                <svg class="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Branch Audit</p>
+                                <p class="text-xs text-gray-500">Consideration of branch reports (143(8)).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
+                                <svg class="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Agreement</p>
+                                <p class="text-xs text-gray-500">BS & P&L agree with books/returns?</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
+                                <svg class="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Accounting Standards</p>
+                                <p class="text-xs text-gray-500">Compliance with AS.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+                                <svg class="h-4 w-4 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Adverse Observations</p>
+                                <p class="text-xs text-gray-500">Comments affecting company functioning.</p>
+                            </div>
+                        </div>
+                         <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+                                <svg class="h-4 w-4 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Director Disqualification</p>
+                                <p class="text-xs text-gray-500">Status under Section 164(2).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+                                <svg class="h-4 w-4 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Qualifications</p>
+                                <p class="text-xs text-gray-500">Reservations or adverse remarks.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IFC Box -->
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-4 mb-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 pt-1">
+                                <svg class="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                            </div>
+                            <div class="ml-3">
+                                <h3 class="text-sm font-bold text-blue-900">Internal Financial Controls (IFC)</h3>
+                                <p class="text-sm text-blue-800 mt-1">Report on adequacy and operating effectiveness.</p>
+                                <div class="mt-2 text-xs bg-white bg-opacity-60 p-2 rounded text-blue-700">
+                                    <span class="font-semibold">Exemption:</span> OPCs, Small Companies, or Private Companies with Turnover < 50 Cr AND Borrowings < 25 Cr.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Matters (Rule 11) -->
+                    <div class="border-t border-gray-200 pt-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">Other Matters (Rule 11)</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex p-3 bg-gray-50 rounded-lg">
+                                <span class="font-bold text-legal-600 mr-2">1.</span>
+                                <div><span class="font-semibold text-gray-800">Litigations:</span> <span class="text-gray-600 text-sm">Impact on financial position.</span></div>
+                            </div>
+                            <div class="flex p-3 bg-gray-50 rounded-lg">
+                                <span class="font-bold text-legal-600 mr-2">2.</span>
+                                <div><span class="font-semibold text-gray-800">Foreseeable Losses:</span> <span class="text-gray-600 text-sm">Long-term contracts/derivatives.</span></div>
+                            </div>
+                            <div class="flex p-3 bg-gray-50 rounded-lg">
+                                <span class="font-bold text-legal-600 mr-2">3.</span>
+                                <div><span class="font-semibold text-gray-800">IEPF Delays:</span> <span class="text-gray-600 text-sm">Delays in transferring amounts.</span></div>
+                            </div>
+                            <div class="flex p-3 bg-gray-50 rounded-lg">
+                                <span class="font-bold text-legal-600 mr-2">4.</span>
+                                <div><span class="font-semibold text-gray-800">Dividends:</span> <span class="text-gray-600 text-sm">Compliance with Section 123.</span></div>
+                            </div>
+                            <div class="flex p-3 bg-gray-50 rounded-lg col-span-1 md:col-span-2">
+                                <span class="font-bold text-legal-600 mr-2">5.</span>
+                                <div><span class="font-semibold text-gray-800">Management Representation:</span> <span class="text-gray-600 text-sm">No undisclosed lending/investing in Ultimate Beneficiaries or guarantees.</span></div>
+                            </div>
+                            <div class="flex p-3 bg-indigo-50 border border-indigo-100 rounded-lg col-span-1 md:col-span-2">
+                                <span class="font-bold text-indigo-600 mr-2">6.</span>
+                                <div><span class="font-semibold text-indigo-900">Audit Trail:</span> <span class="text-indigo-800 text-sm">Software must have a non-tamperable audit trail preserved for 8 years.</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 4 -->
+                <section id="other-legal" class="glass-card rounded-2xl p-6 md:p-8 shadow-sm">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="h-10 w-10 rounded-lg section-icon flex items-center justify-center text-white font-bold">4</div>
+                        <h2 class="text-2xl font-serif font-bold text-gray-900">Other Legal Requirements</h2>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border border-gray-200">
+                            <h4 class="font-bold text-legal-800">Section 197(16) - Public Companies</h4>
+                            <p class="text-gray-600 text-sm mt-1">Statement on whether director remuneration is within provisions.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-gray-200">
+                            <h4 class="font-bold text-legal-800">Section 143(11) - CARO</h4>
+                            <p class="text-gray-600 text-sm mt-1">Additional statements if required by Central Govt (e.g., CARO 2020).</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 5: Frauds -->
+                <section id="frauds" class="glass-card rounded-2xl p-6 md:p-8 shadow-sm border-l-8 border-l-red-500">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="h-10 w-10 rounded-lg bg-red-600 flex items-center justify-center text-white font-bold">5</div>
+                        <h2 class="text-2xl font-serif font-bold text-gray-900">Reporting on Frauds</h2>
+                        <span class="px-2 py-1 bg-red-50 text-red-600 text-xs rounded border border-red-200">Section 143(12)</span>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row gap-6 mb-8">
+                        <!-- Less than 1 Crore -->
+                        <div class="flex-1 bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                            <div class="text-center mb-4">
+                                <span class="inline-block px-3 py-1 rounded-full bg-green-100 text-green-800 text-xs font-bold uppercase tracking-wide">Fraud < 1 Crore</span>
+                            </div>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex">
+                                    <span class="w-24 font-bold text-gray-500">Report to:</span>
+                                    <span class="text-gray-900 font-medium">Audit Committee / Board</span>
+                                </li>
+                                <li class="flex">
+                                    <span class="w-24 font-bold text-gray-500">Details:</span>
+                                    <span class="text-gray-900">Nature, Amount, Parties involved</span>
+                                </li>
+                                <li class="flex">
+                                    <span class="w-24 font-bold text-gray-500">Disclosure:</span>
+                                    <span class="text-gray-900">Board's Report must include details + remedial actions</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- 1 Crore or More -->
+                        <div class="flex-1 bg-white p-5 rounded-xl border border-red-200 shadow-sm relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-16 h-16 bg-red-50 rounded-bl-full -mr-8 -mt-8"></div>
+                            <div class="text-center mb-4">
+                                <span class="inline-block px-3 py-1 rounded-full bg-red-100 text-red-800 text-xs font-bold uppercase tracking-wide">Fraud ≥ 1 Crore</span>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <div class="h-8 w-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-xs shrink-0">1</div>
+                                    <div class="ml-3 text-sm">
+                                        <p class="font-bold text-gray-900">Within 2 Days</p>
+                                        <p class="text-gray-600 text-xs">Report to Board/Audit Committee seeking reply.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="h-8 w-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-xs shrink-0">2</div>
+                                    <div class="ml-3 text-sm">
+                                        <p class="font-bold text-gray-900">Wait 45 Days</p>
+                                        <p class="text-gray-600 text-xs">For reply from Board/Committee.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="h-8 w-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-xs shrink-0">3</div>
+                                    <div class="ml-3 text-sm">
+                                        <p class="font-bold text-gray-900">Within 15 Days</p>
+                                        <p class="text-gray-600 text-xs">Forward report + reply (ADT-4) to Secretary, MCA.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Penalties Footer -->
+                    <div class="bg-gray-800 text-white p-4 rounded-lg flex flex-col sm:flex-row justify-between items-center">
+                        <div class="flex items-center mb-2 sm:mb-0">
+                            <svg class="w-6 h-6 text-yellow-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            <span class="font-bold uppercase tracking-wider text-sm">Penalties for Non-Compliance</span>
+                        </div>
+                        <div class="flex space-x-6 text-sm">
+                            <div class="text-center">
+                                <span class="block text-gray-400 text-xs">Listed Companies</span>
+                                <span class="font-bold text-yellow-400">₹ 5 Lakh</span>
+                            </div>
+                            <div class="text-center border-l border-gray-600 pl-6">
+                                <span class="block text-gray-400 text-xs">Other Companies</span>
+                                <span class="font-bold text-white">₹ 1 Lakh</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <footer class="bg-white border-t border-gray-200 mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-500 text-sm">Source: Companies Act, 2013 | Auditor Reporting Obligations</p>
+            <p class="text-gray-400 text-xs mt-2">Disclaimer: This page is for educational purposes only and does not constitute professional legal advice.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
